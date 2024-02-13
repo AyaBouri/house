@@ -28,11 +28,11 @@
                 <tbody>
                         @foreach($option as $i => $options)
                             <tr>
-                                <td>{{$option['name']}}</td>
-                                <td>{{$option['phone']}}</td>
-                                <td>{{$option['email']}}</td>
-                                <td>{{$option['address']}}</td>
-                                <td>{{$option['postal_code']}}</td>
+                                <td>{{ $option[($options['name'])] }}</td>
+                                <td>{{$option[$options['phone']]}}</td>
+                                <td>{{$option[$options['email']]}}</td>
+                                <td>{{$option[$options['address']]}}</td>
+                                <td>{{$option[$options['postal_code']]}}</td>
                                 <td>
                                     <div class="d-flex gap-2 w-100 justify-content-end">
                                         <a href="{{url('admin/property/edit',$option)}}"><button class="btn btn-warning">Editer</button></a>
